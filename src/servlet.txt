@@ -1,0 +1,20 @@
+	1、servlet通常指我们写的继承自httpservlet类
+	2、servlet是由tomcat容器来控制的
+	3、客户端传来一个http请求，tomcat接受了这个请求，调用init方法进行初始化，
+	(---tomcat会默认调用init(ServletConfig config)方法来获取配置信息，同时该方法
+	又会调用init()无参方法，而我们需要重写的便是这个无参方法---)
+	然后将其封装成httpservletrequest对象，即创建了一个http
+request对象，(注意，httpservletrequest这个对象是由容器创建的，而且HttpServletRequest
+只是一个接口不可能被实例化)这个对象继承自servletrequset接口，可以与http协议交流，具有http协议有关的方法。
+	(而事实上，Tomcat在大多数情况下充当servlet的容器，
+	也就是说：在写完JSP代码后进行第一次执行时，tomcat（servlet容器）
+	先将JSP代码翻译成servlet类（java代码），然后实例化该类，再调用该类的init,service,destory
+	等进行生命周期服务。当客户端再进行第二次访问请求时，此时就没有servlet容器的翻译这一步了，
+	因为之前翻译的java代码会一直保存，以便于后面的访问不再进行翻译，可大大提高访问效率。
+	所以，JSP页面在第一次被访问时，其所花费的时间是最长的。)
+	tomcat是一个servlet容器。
+	这时候tomcat会再创建一个httpservletresponse对象，并将这两个对象当作参数传入httpservlet对象里
+	（service方法）
+	调用doget或者dopost方法产生响应数据，再讲这些数据通过httpservresponse传回客户端
+	从这里就可以看出来，servlet其实主要是接受了httpservrequest和httpservletresponse这两个对象
+	后面的很多事都是它们做的，毕竟，它们都有与http协议相关的方法。

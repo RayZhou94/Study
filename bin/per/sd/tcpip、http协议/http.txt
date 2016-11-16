@@ -1,0 +1,41 @@
+	http：无状态超文本协议，每次请求默认是一个新的请求（cookie补充状态）、
+			应用层
+	https：加密协议，（基于安全套接字层的超文本传输协议）可以理解为https = http + ssl 
+			默认端口：443		传输层	需要认证证书
+			超文本传输协议 (HTTP) 是一个用来通过互联网传输和接收信息的协议。HTTP 使用请求/响应的过程，
+			因此信息可在服务器间快速、轻松而且精确的进行传输。当你访问 Web 页面的时候你就是在使用 HTTP 协议，
+			但 HTTP 是不安全的，
+			可以轻松对窃听你跟 Web 服务器之间的数据传输。在很多情况下，客户和服务器之间传输的是敏感歇息，
+			需要防止未经授权的访问。为了满足这个要求，网景公司(Netscape)推出了HTTPS，也就是基于安全套接字层的 HTTP 
+			协议。
+			
+			
+	http协议内容
+	request：首行、请求头、请求体、空行
+	首行：:method:GET
+	请求头：accept：浏览器可以接受的媒体类型，如text/html（html文档）
+		  accept-ecoding：浏览器接受的编码方法，如gzip
+		  accept-language：浏览器接受的语言
+		  :scheme:https；请求的协议类型
+		  user-agent：浏览器的信息包括电脑的配置，如：windows 10，chrome
+		  cookie：请求的cookie信息
+		  content-length：请求体的长度
+		  content-type：请求的类型
+		  referer：上个链接，从该链接转过来
+		  connection：是否长连接	keep-alive或者close
+		  host：请求的主机和端口号	通常是域名端口号默认80
+	请求体：query	string
+	
+	response：状态行、响应头、响应体、空行
+	状态行：set-cookie：将cookie发送到客户端浏览器
+		  content-type：
+		  content-length：
+		  content-ecoding：表明自己用了什么压缩方法，如gzip
+		  content-language：表明自己用了什么语言
+		  server：服务器的信息，如：apache
+		  connection：
+		  date:
+		  cache-control:
+		  
+		  
+	

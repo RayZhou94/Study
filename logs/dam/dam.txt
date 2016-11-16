@@ -1,0 +1,2 @@
+[INFO][2016-11-15 12:55:23,433][per.sd.log4j.Logging]begin...HelloWorld
+[INFO][2016-11-15 12:55:23,434][per.sd.log4j.Logging]after...HelloWorld

@@ -1,0 +1,8 @@
+	1、节点流
+		1)字节流:输入流(InputStream	FileInputStream) 输出流 (OutputStream FileOutputStream)
+		2)字符流:输入流(Reader	FileReader)输出流(Writer	FileWriter)
+	2、缓冲流
+		1)字节缓冲流:输入流(BufferedInputStream)输出流(BufferedOutputStream)直接添加上就行缓冲流（输入流）
+		:new BufferedInputStream(new FileInputStream(File));
+		2)字符缓冲流:输入流(BufferedReader)输出流(BufferedWriter)/新方法readLine()
+	3、处理流(解码、编码)
